@@ -83,6 +83,8 @@ public class SecurityConfig {
                                 "/api/quests",
                                 "/api/football/leagues",
                                 "/api/football/leagues/sync/**").hasRole("ADMIN")
+                        .requestMatchers(HttpMethod.POST,
+                                "/api/football/worldcup/sync").authenticated()
                         .requestMatchers(HttpMethod.PUT,
                                 "/api/tournaments/*",
                                 "/api/quests/*",

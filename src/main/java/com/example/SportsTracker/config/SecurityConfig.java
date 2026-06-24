@@ -92,6 +92,11 @@ public class SecurityConfig {
                                 "/api/tournaments/*",
                                 "/api/quests/*",
                                 "/api/football/leagues/*").hasRole("ADMIN")
+                        .requestMatchers(HttpMethod.GET,
+                                // existing ones...
+                                "/api/football/**",
+                                "/api/football/worldcup/**"
+                        ).permitAll()
 
                         // All other endpoints require an authenticated session
                         .anyRequest().authenticated()

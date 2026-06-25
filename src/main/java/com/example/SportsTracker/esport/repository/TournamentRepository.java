@@ -16,4 +16,5 @@ public interface TournamentRepository extends MongoRepository<Tournament, String
     Page<Tournament> findByGame(String game, Pageable pageable);
     Page<Tournament> findByStatusAndGame(TournamentStatus status, String game, Pageable pageable);
     List<Tournament> findByStatusAndEndDateBefore(TournamentStatus status, LocalDateTime date);
+    List<Tournament> findByNameContainingIgnoreCase(String name);
 }

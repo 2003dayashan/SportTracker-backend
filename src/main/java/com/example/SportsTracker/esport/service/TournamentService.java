@@ -43,9 +43,7 @@ public class TournamentService {
         return repository.findAll(pageable);
     }
 
-    public Tournament getTournament(String id) {
-        return repository.findById(id).orElseThrow(() -> new ResourceNotFoundException("Tournament not found"));
-    }
+
 
     public Tournament updateTournament(String id, TournamentRequest request) {
         Tournament t = getTournament(id);
@@ -69,5 +67,14 @@ public class TournamentService {
         List<Tournament> pastDue = repository.findByStatusAndEndDateBefore(TournamentStatus.ONGOING, LocalDateTime.now());
         pastDue.forEach(t -> t.setStatus(TournamentStatus.COMPLETED));
         repository.saveAll(pastDue);
+    }
+
+    public Tournament getTournament(String id) {
+        return repository.findById(id)
+                .orElseThrow(() -> new RuntimeException("Tournament not found: " + id));
+    }
+
+    public List<Tournament> searchTournaments(String query) {
+        return repository.findByNameContainingIgnoreCase(query);
     }
 }

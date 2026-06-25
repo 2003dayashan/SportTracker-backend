@@ -3,6 +3,7 @@ package com.example.SportsTracker.core.controller;
 import com.example.SportsTracker.core.dto.AuthResponse;
 import com.example.SportsTracker.core.dto.SigninRequest;
 import com.example.SportsTracker.core.dto.SignupRequest;
+import com.example.SportsTracker.core.model.UpdateProfileRequest;
 import com.example.SportsTracker.core.model.User;
 import com.example.SportsTracker.core.repository.UserRepository;
 import com.example.SportsTracker.core.service.AuthService;
@@ -74,5 +75,30 @@ public class AuthController {
     public ResponseEntity<String> resetPassword(@RequestBody Map<String, String> body) {
         authService.resetPassword(body.get("token"), body.get("password"));
         return ResponseEntity.ok("Password reset successful!");
+    }
+
+    @PutMapping("/me")
+    public ResponseEntity<AuthResponse> updateProfile(
+            @RequestBody UpdateProfileRequest request, HttpSession session) {
+        String userId = (String) session.getAttribute("USER_ID");
+        if (userId == null) {
+            throw new UnauthorizedException("User not authenticated");
+        }
+
+        User user = userRepository.findById(userId)
+                .orElseThrow(() -> new UnauthorizedException("User not found"));
+
+        if (request.getUsername() != null) user.setUsername(request.getUsername());
+        if (request.getEmail() != null) user.setEmail(request.getEmail());
+        userRepository.save(user);
+
+        AuthResponse response = AuthResponse.builder()
+                .id(user.getId())
+                .username(user.getUsername())
+                .email(user.getEmail())
+                .roles(user.getRoles())
+                .build();
+
+        return ResponseEntity.ok(response);
     }
 }

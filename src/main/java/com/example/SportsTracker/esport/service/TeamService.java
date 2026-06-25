@@ -28,4 +28,25 @@ public class TeamService {
     public List<Team> getAllTeams() {
         return repository.findAll();
     }
+
+    public Team getTeam(String id) {
+        return repository.findById(id)
+                .orElseThrow(() -> new RuntimeException("Team not found: " + id));
+    }
+
+    public Team updateTeam(String id, TeamRequest request) {
+        Team team = getTeam(id);
+        team.setName(request.getName());
+        team.setTournamentId(request.getTournamentId());
+        team.setLogoUrl(request.getLogoUrl());
+        return repository.save(team);
+    }
+
+    public void deleteTeam(String id) {
+        repository.deleteById(id);
+    }
+
+    public List<Team> searchTeams(String query) {
+        return repository.findByNameContainingIgnoreCase(query);
+    }
 }

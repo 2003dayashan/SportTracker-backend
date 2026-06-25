@@ -13,6 +13,8 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RestController
 @RequestMapping("/api/tournaments")
 @RequiredArgsConstructor
@@ -44,5 +46,15 @@ public class TournamentController {
     public ResponseEntity<Void> delete(@PathVariable String id) {
         service.deleteTournament(id);
         return ResponseEntity.noContent().build();
+    }
+
+    @GetMapping("/{id}")
+    public ResponseEntity<Tournament> getOne(@PathVariable String id) {
+        return ResponseEntity.ok(service.getTournament(id));
+    }
+
+    @GetMapping("/search")
+    public ResponseEntity<List<Tournament>> search(@RequestParam String q) {
+        return ResponseEntity.ok(service.searchTournaments(q));
     }
 }

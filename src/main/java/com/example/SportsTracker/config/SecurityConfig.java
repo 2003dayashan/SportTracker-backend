@@ -87,6 +87,10 @@ public class SecurityConfig {
                                 "/v3/api-docs/**"
                         ).permitAll()
 
+                        .requestMatchers(HttpMethod.GET,
+                                "/api/players/**", "/api/teams/**", "/api/tournaments/**"
+                        ).permitAll()
+
                         // ADMIN only POST
                         .requestMatchers(HttpMethod.POST,
                                 "/api/tournaments",
@@ -96,7 +100,8 @@ public class SecurityConfig {
                         ).hasRole("ADMIN")
 
                         .requestMatchers(HttpMethod.POST,
-                                "/api/football/worldcup/sync"
+                                "/api/football/worldcup/sync",
+                                "/api/players/**", "/api/teams/**", "/api/tournaments/**"
                         ).authenticated()
 
                         .requestMatchers(HttpMethod.PUT,
@@ -105,6 +110,15 @@ public class SecurityConfig {
                                 "/api/quests/submissions/*/review",
                                 "/api/football/leagues/*"
                         ).hasRole("ADMIN")
+
+                        .requestMatchers(HttpMethod.PUT,
+                                "/api/players/**", "/api/teams/**", "/api/tournaments/**"
+                        ).authenticated()
+
+                        .requestMatchers(HttpMethod.DELETE,
+                                "/api/players/**", "/api/teams/**", "/api/tournaments/**"
+                        ).authenticated()
+
 
                         .requestMatchers(HttpMethod.DELETE,
                                 "/api/tournaments/*",

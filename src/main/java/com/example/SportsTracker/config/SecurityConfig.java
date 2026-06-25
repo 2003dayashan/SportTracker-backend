@@ -56,8 +56,16 @@ public class SecurityConfig {
                 )
 
                 .authorizeHttpRequests(auth -> auth
-                        // Public Endpoints
-                        .requestMatchers(HttpMethod.POST, "/api/auth/signup", "/api/auth/signin").permitAll()
+
+                        // ✅ PUBLIC POST — මුලින්ම දාන්න
+                        .requestMatchers(HttpMethod.POST,
+                                "/api/auth/signup",
+                                "/api/auth/signin",
+                                "/api/auth/forgot-password",
+                                "/api/auth/reset-password"
+                        ).permitAll()
+
+                        // ✅ PUBLIC GET
                         .requestMatchers(HttpMethod.GET,
                                 "/",
                                 "/quests",
@@ -72,35 +80,38 @@ public class SecurityConfig {
                                 "/api/football/standings/**",
                                 "/api/football/leagues",
                                 "/api/football/fixtures",
+                                "/api/football/**",
+                                "/api/football/worldcup/**",
                                 "/swagger-ui.html",
                                 "/swagger-ui/**",
-                                "/v3/api-docs/**").permitAll()
+                                "/v3/api-docs/**"
+                        ).permitAll()
 
-                        // ROLE_ADMIN only endpoints
-                        // Using precise path matching so sub-paths like /api/quests/{id}/submit remain accessible to normal users
+                        // ADMIN only POST
                         .requestMatchers(HttpMethod.POST,
                                 "/api/tournaments",
                                 "/api/quests",
                                 "/api/football/leagues",
-                                "/api/football/leagues/sync/**").hasRole("ADMIN")
+                                "/api/football/leagues/sync/**"
+                        ).hasRole("ADMIN")
+
                         .requestMatchers(HttpMethod.POST,
-                                "/api/football/worldcup/sync").authenticated()
+                                "/api/football/worldcup/sync"
+                        ).authenticated()
+
                         .requestMatchers(HttpMethod.PUT,
                                 "/api/tournaments/*",
                                 "/api/quests/*",
                                 "/api/quests/submissions/*/review",
-                                "/api/football/leagues/*").hasRole("ADMIN")
+                                "/api/football/leagues/*"
+                        ).hasRole("ADMIN")
+
                         .requestMatchers(HttpMethod.DELETE,
                                 "/api/tournaments/*",
                                 "/api/quests/*",
-                                "/api/football/leagues/*").hasRole("ADMIN")
-                        .requestMatchers(HttpMethod.GET,
-                                // existing ones...
-                                "/api/football/**",
-                                "/api/football/worldcup/**"
-                        ).permitAll()
+                                "/api/football/leagues/*"
+                        ).hasRole("ADMIN")
 
-                        // All other endpoints require an authenticated session
                         .anyRequest().authenticated()
                 )
 

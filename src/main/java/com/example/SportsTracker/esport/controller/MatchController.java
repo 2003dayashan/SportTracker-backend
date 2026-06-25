@@ -33,10 +33,5 @@ public class MatchController {
         return ResponseEntity.ok(service.updateScore(id, request));
     }
 
-    @GetMapping
-    public ResponseEntity<List<Match>> getAllMatches(
-            @RequestParam(required = false) String tournamentId,
-            @RequestParam(required = false) MatchStatus status) {
-        return ResponseEntity.ok(service.getMatches(tournamentId, status));
-    }
+
 }

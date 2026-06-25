@@ -14,6 +14,8 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.Map;
+
 @RestController
 @RequestMapping("/api/auth")
 @RequiredArgsConstructor
@@ -59,5 +61,18 @@ public class AuthController {
                 .build();
 
         return ResponseEntity.ok(response);
+    }
+
+    @PostMapping("/forgot-password")
+    public ResponseEntity<String> forgotPassword(@RequestBody Map<String, String> body) {
+        authService.forgotPassword(body.get("email"));
+        // Security: email exist වෙනවත් නැතත් same response
+        return ResponseEntity.ok("If that email exists, a reset link has been sent.");
+    }
+
+    @PostMapping("/reset-password")
+    public ResponseEntity<String> resetPassword(@RequestBody Map<String, String> body) {
+        authService.resetPassword(body.get("token"), body.get("password"));
+        return ResponseEntity.ok("Password reset successful!");
     }
 }

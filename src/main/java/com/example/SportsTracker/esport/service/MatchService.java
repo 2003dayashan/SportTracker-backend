@@ -12,8 +12,8 @@ import org.springframework.stereotype.Service;
 @RequiredArgsConstructor
 public class MatchService {
 
-    private final MatchRepository repository;
-    private final SimpMessagingTemplate messagingTemplate;
+    private MatchRepository repository;
+    private SimpMessagingTemplate messagingTemplate;
 
     public Match updateScore(String matchId, MatchScoreUpdateRequest request) {
         Match match = repository.findById(matchId)

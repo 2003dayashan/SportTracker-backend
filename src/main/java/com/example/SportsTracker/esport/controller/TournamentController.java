@@ -20,7 +20,7 @@ import java.util.List;
 @RequiredArgsConstructor
 public class TournamentController {
 
-    private final TournamentService service;
+    private TournamentService service;
 
     @GetMapping
     public ResponseEntity<Page<Tournament>> getAll(

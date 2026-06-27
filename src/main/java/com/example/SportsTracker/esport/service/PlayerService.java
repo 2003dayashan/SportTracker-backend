@@ -12,7 +12,7 @@ import java.util.List;
 @RequiredArgsConstructor
 public class PlayerService {
 
-    private final PlayerRepository repository;
+    private PlayerRepository repository;
 
     public List<Player> getAllPlayers(String teamId) {
         if (teamId != null) return repository.findByTeamId(teamId);

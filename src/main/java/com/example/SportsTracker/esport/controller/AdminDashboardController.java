@@ -18,10 +18,10 @@ import java.util.Map;
 @RequiredArgsConstructor
 public class AdminDashboardController {
 
-    private final TournamentRepository tournamentRepository;
-    private final TeamRepository teamRepository;
-    private final PlayerRepository playerRepository;
-    private final MatchRepository matchRepository;
+    private TournamentRepository tournamentRepository;
+    private TeamRepository teamRepository;
+    private PlayerRepository playerRepository;
+    private MatchRepository matchRepository;
 
     @GetMapping
     public ResponseEntity<Map<String, Long>> getStats() {

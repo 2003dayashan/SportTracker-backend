@@ -19,7 +19,7 @@ import java.util.List;
 @RequiredArgsConstructor
 public class TournamentService {
 
-    private final TournamentRepository repository;
+    private TournamentRepository repository;
 
     public Tournament createTournament(TournamentRequest request, String organizerId) {
         Tournament tournament = Tournament.builder()

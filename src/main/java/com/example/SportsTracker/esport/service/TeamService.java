@@ -12,7 +12,7 @@ import java.util.List;
 @Service
 @RequiredArgsConstructor
 public class TeamService {
-    private final TeamRepository repository;
+    private TeamRepository repository;
 
     public Team createTeam(TeamRequest request, String captainId) {
         Team team = Team.builder()

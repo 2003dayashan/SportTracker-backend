@@ -87,6 +87,8 @@ public class SecurityConfig {
                                 "/v3/api-docs/**"
                         ).permitAll()
 
+                        .requestMatchers(HttpMethod.GET, "/api/football/worldcup/**").authenticated()
+
                         .requestMatchers(HttpMethod.GET,
                                 "/api/players/**", "/api/teams/**", "/api/tournaments/**"
                         ).permitAll()

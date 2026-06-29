@@ -18,8 +18,8 @@ import java.util.stream.Collectors;
 @RequiredArgsConstructor
 public class StandingsController {
 
-    private MatchRepository matchRepository;
-    private TeamRepository teamRepository;
+    private final MatchRepository matchRepository;
+    private final TeamRepository teamRepository;
 
     @GetMapping
     public ResponseEntity<List<StandingDto>> getStandings(@PathVariable String tournamentId) {

@@ -16,7 +16,7 @@ import java.util.List;
 @RequiredArgsConstructor
 public class MatchController {
 
-    private MatchService service;
+    private final MatchService service;
 
     @PostMapping
     public ResponseEntity<Match> create(@RequestBody Match match) {

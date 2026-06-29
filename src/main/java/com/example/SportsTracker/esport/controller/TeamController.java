@@ -16,7 +16,7 @@ import java.util.List;
 @RequestMapping("/api/teams")
 @RequiredArgsConstructor
 public class TeamController {
-    private TeamService service;
+    private final TeamService service;
 
     @GetMapping
     public ResponseEntity<List<Team>> getAll() {

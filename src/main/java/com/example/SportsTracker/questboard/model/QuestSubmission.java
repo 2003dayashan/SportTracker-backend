@@ -1,31 +1,44 @@
 package com.example.SportsTracker.questboard.model;
 
-import lombok.AllArgsConstructor;
-import lombok.Builder;
-import lombok.Data;
-import lombok.NoArgsConstructor;
-import org.springframework.data.annotation.CreatedDate;
+import jakarta.validation.constraints.NotBlank;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-import java.time.LocalDateTime;
+import java.util.Date;
 
-@Data
-@Builder
-@NoArgsConstructor
-@AllArgsConstructor
 @Document(collection = "quest_submissions")
 public class QuestSubmission {
+    public enum Status { PENDING, APPROVED, REJECTED }
+
     @Id
     private String id;
-    private String questId;
-    private String userId;
-    private SubmissionStatus status;
-    private String proofUrl;
+    private String questId; // Reference to Quest
+    private String userId; // Reference to User (Adventurer)
+    @NotBlank(message = "Proof text is required")
+    private String proofText;
+    private String proofFileUrl; // nullable
+    private Status status;
+    private Date submittedAt;
 
-    @CreatedDate
-    private LocalDateTime submittedAt;
+    // Getters and Setters
+    public String getId() { return id; }
+    public void setId(String id) { this.id = id; }
 
-    private LocalDateTime reviewedAt;
-    private String reviewedByUserId;
+    public String getQuestId() { return questId; }
+    public void setQuestId(String questId) { this.questId = questId; }
+
+    public String getUserId() { return userId; }
+    public void setUserId(String userId) { this.userId = userId; }
+
+    public String getProofText() { return proofText; }
+    public void setProofText(String proofText) { this.proofText = proofText; }
+
+    public String getProofFileUrl() { return proofFileUrl; }
+    public void setProofFileUrl(String proofFileUrl) { this.proofFileUrl = proofFileUrl; }
+
+    public Status getStatus() { return status; }
+    public void setStatus(Status status) { this.status = status; }
+
+    public Date getSubmittedAt() { return submittedAt; }
+    public void setSubmittedAt(Date submittedAt) { this.submittedAt = submittedAt; }
 }

@@ -17,7 +17,7 @@ import java.util.List;
 @RequiredArgsConstructor
 public class PlayerController {
 
-    private PlayerService service;
+    private final PlayerService service;
 
     @GetMapping
     public ResponseEntity<List<Player>> getAll(@RequestParam(required = false) String teamId) {

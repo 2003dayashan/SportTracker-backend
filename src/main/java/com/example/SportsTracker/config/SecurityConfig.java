@@ -1,6 +1,7 @@
 package com.example.SportsTracker.config;
 
 import com.example.SportsTracker.core.model.Role;
+import com.example.SportsTracker.questboard.security.JwtAuthenticationFilter;
 import jakarta.servlet.FilterChain;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.http.HttpServletRequest;
@@ -10,6 +11,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpMethod;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
+import org.springframework.security.config.annotation.method.configuration.EnableMethodSecurity;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.annotation.web.configurers.AbstractHttpConfigurer;
@@ -29,7 +31,14 @@ import java.util.stream.Collectors;
 
 @Configuration
 @EnableWebSecurity
+@EnableMethodSecurity
 public class SecurityConfig {
+
+    private final JwtAuthenticationFilter jwtAuthenticationFilter;
+
+    public SecurityConfig(JwtAuthenticationFilter jwtAuthenticationFilter) {
+        this.jwtAuthenticationFilter = jwtAuthenticationFilter;
+    }
 
     @Bean
     public PasswordEncoder passwordEncoder() {
@@ -62,7 +71,9 @@ public class SecurityConfig {
                                 "/api/auth/signup",
                                 "/api/auth/signin",
                                 "/api/auth/forgot-password",
-                                "/api/auth/reset-password"
+                                "/api/auth/reset-password",
+                                "/api/questboard/auth/register",
+                                "/api/questboard/auth/login"
                         ).permitAll()
 
                         // ✅ PUBLIC GET
@@ -76,7 +87,12 @@ public class SecurityConfig {
                                 "/images/**",
                                 "/static/**",
                                 "/favicon.ico",
+                                "/api/quests",
+                                "/api/quests/**",
                                 "/api/quests/leaderboard",
+                                "/api/categories",
+                                "/api/categories/**",
+                                "/api/files/**",
                                 "/api/football/standings/**",
                                 "/api/football/leagues",
                                 "/api/football/fixtures",
@@ -87,16 +103,27 @@ public class SecurityConfig {
                                 "/v3/api-docs/**"
                         ).permitAll()
 
-                        .requestMatchers(HttpMethod.GET, "/api/football/worldcup/**").authenticated()
-
                         .requestMatchers(HttpMethod.GET,
                                 "/api/players/**", "/api/teams/**", "/api/tournaments/**"
                         ).permitAll()
 
+                        // Quest board auth (logout, me)
+                        .requestMatchers("/api/questboard/auth/logout", "/api/questboard/auth/me")
+                        .authenticated()
+
+                        // Quest board: JWT-authenticated write operations (roles enforced via @PreAuthorize)
+                        .requestMatchers(HttpMethod.POST,
+                                "/api/quests",
+                                "/api/quests/*/claim",
+                                "/api/quests/*/submit",
+                                "/api/quests/submissions/*/approve",
+                                "/api/categories",
+                                "/api/files/upload"
+                        ).authenticated()
+
                         // ADMIN only POST
                         .requestMatchers(HttpMethod.POST,
                                 "/api/tournaments",
-                                "/api/quests",
                                 "/api/football/leagues",
                                 "/api/football/leagues/sync/**"
                         ).hasRole("ADMIN")
@@ -108,10 +135,16 @@ public class SecurityConfig {
 
                         .requestMatchers(HttpMethod.PUT,
                                 "/api/tournaments/*",
-                                "/api/quests/*",
-                                "/api/quests/submissions/*/review",
                                 "/api/football/leagues/*"
                         ).hasRole("ADMIN")
+
+                        .requestMatchers(HttpMethod.PUT,
+                                "/api/quests/*"
+                        ).authenticated()
+
+                        .requestMatchers(HttpMethod.PUT,
+                                "/api/quests/submissions/*/review"
+                        ).authenticated()
 
                         .requestMatchers(HttpMethod.PUT,
                                 "/api/players/**", "/api/teams/**", "/api/tournaments/**"
@@ -124,12 +157,18 @@ public class SecurityConfig {
 
                         .requestMatchers(HttpMethod.DELETE,
                                 "/api/tournaments/*",
-                                "/api/quests/*",
                                 "/api/football/leagues/*"
                         ).hasRole("ADMIN")
 
+                        .requestMatchers(HttpMethod.DELETE,
+                                "/api/quests/*"
+                        ).authenticated()
+
                         .anyRequest().authenticated()
                 )
+
+                // Quest board JWT auth (quest_token cookie)
+                .addFilterBefore(jwtAuthenticationFilter, UsernamePasswordAuthenticationFilter.class)
 
                 // Bridge our custom HttpSession login context to Spring Security Context
                 .addFilterBefore(new OncePerRequestFilter() {

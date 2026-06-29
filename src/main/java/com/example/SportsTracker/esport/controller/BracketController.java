@@ -15,7 +15,7 @@ import java.util.stream.Collectors;
 @RequiredArgsConstructor
 public class BracketController {
 
-    private MatchRepository matchRepository;
+    private final MatchRepository matchRepository;
 
     @GetMapping
     public ResponseEntity<List<Match>> getBracket(@PathVariable String tournamentId) {

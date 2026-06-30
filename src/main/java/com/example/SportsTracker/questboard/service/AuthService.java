@@ -54,9 +54,5 @@ public class AuthService {
         return userRepository.findById(id).orElse(null);
     }
 
-    public void promoteToAdmin(String id) {
-        User user = userRepository.findById(id).orElseThrow();
-        user.setRole(User.Role.ADMIN);
-        userRepository.save(user);
-    }
+
 }

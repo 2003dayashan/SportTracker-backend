@@ -81,20 +81,7 @@ public class AuthController {
         return ResponseEntity.status(HttpStatus.UNAUTHORIZED).build();
     }
 
-    @PostMapping("/promote")
-    public ResponseEntity<?> promoteMe() {
-        Authentication auth = SecurityContextHolder.getContext().getAuthentication();
-        if (auth == null || !auth.isAuthenticated()) {
-            return ResponseEntity.status(HttpStatus.UNAUTHORIZED).build();
-        }
-        Object principal = auth.getPrincipal();
-        if (principal instanceof String userId) {
-            authService.promoteToAdmin(userId);
-            String newToken = jwtUtil.generateToken(userId, User.Role.ADMIN.name());
-            return ResponseEntity.ok(Map.of("message", "Promoted to ADMIN. Please logout and login again to see changes."));
-        }
-        return ResponseEntity.status(HttpStatus.UNAUTHORIZED).build();
-    }
+
 
     private void addCookie(HttpServletResponse response, String token) {
         Cookie cookie = new Cookie("quest_token", token);

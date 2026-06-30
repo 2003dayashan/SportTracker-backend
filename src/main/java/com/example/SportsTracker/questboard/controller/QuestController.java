@@ -255,4 +255,20 @@ public class QuestController {
                 s.getSubmittedAt() != null ? s.getSubmittedAt().toString() : null
         );
     }
+
+    // GET /api/quests/leaderboard
+    @GetMapping("/leaderboard")
+    public ResponseEntity<java.util.List<com.example.SportsTracker.questboard.model.User>> getLeaderboard() {
+        return ResponseEntity.ok(questService.getLeaderboard());
+    }
+
+    // GET /api/quests/submissions/pending (GUILD_MASTER+)
+    @GetMapping("/submissions/pending")
+    @PreAuthorize("hasRole('GUILD_MASTER') or hasRole('ADMIN')")
+    public ResponseEntity<java.util.List<SubmissionResponse>> getPendingSubmissions() {
+        java.util.List<SubmissionResponse> responses = questService.getPendingSubmissions().stream()
+                .map(this::toSubmissionResponse)
+                .toList();
+        return ResponseEntity.ok(responses);
+    }
 }

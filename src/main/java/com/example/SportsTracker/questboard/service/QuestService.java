@@ -200,4 +200,12 @@ public class QuestService {
         userRepository.save(user);
         return questSubmissionRepository.save(submission);
     }
+
+    public java.util.List<User> getLeaderboard() {
+        return userRepository.findTop10ByOrderByXpDesc();
+    }
+
+    public java.util.List<QuestSubmission> getPendingSubmissions() {
+        return questSubmissionRepository.findByStatus(QuestSubmission.Status.PENDING);
+    }
 }

@@ -16,21 +16,3 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 @AllArgsConstructor
 @Document(collection = "football_fixtures")
-public class FootballFixture {
-    @Id
-    private String id;
-    private String leagueId;
-    private String homeClubId;
-    private String awayClubId;
-    private Integer homeScore;
-    private Integer awayScore;
-    private FixtureStatus status;
-    private LocalDateTime kickoffAt;
-    private Integer matchday;
-
-    @CreatedDate
-    private LocalDateTime createdAt;
-
-    @LastModifiedDate
-    private LocalDateTime updatedAt;
-}

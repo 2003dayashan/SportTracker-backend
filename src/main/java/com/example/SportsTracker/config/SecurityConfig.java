@@ -71,9 +71,7 @@ public class SecurityConfig {
                                 "/api/auth/signup",
                                 "/api/auth/signin",
                                 "/api/auth/forgot-password",
-                                "/api/auth/reset-password",
-                                "/api/questboard/auth/register",
-                                "/api/questboard/auth/login"
+                                "/api/auth/reset-password"
                         ).permitAll()
 
                         // ✅ PUBLIC GET
@@ -107,9 +105,7 @@ public class SecurityConfig {
                                 "/api/players/**", "/api/teams/**", "/api/tournaments/**"
                         ).permitAll()
 
-                        // Quest board auth (logout, me)
-                        .requestMatchers("/api/questboard/auth/logout", "/api/questboard/auth/me")
-                        .authenticated()
+
 
                         // Quest board: JWT-authenticated write operations (roles enforced via @PreAuthorize)
                         .requestMatchers(HttpMethod.POST,

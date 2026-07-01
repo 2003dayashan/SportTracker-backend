@@ -1,0 +1,174 @@
+{
+	"info": {
+		"_postman_id": "b3e02db4-c922-4809-906d-556ec4807469",
+		"name": "Questboard API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create Quest",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"title\": \"Win 3 Matches\",\n    \"description\": \"Win three competitive matches in a row.\",\n    \"serviceType\": \"ESPORT\",\n    \"points\": 100\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8080/api/quests",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"quests"
+					]
+				}
+			}
+		},
+		{
+			"name": "Get All Quests",
+			"request": {
+				"method": "GET",
+				"url": {
+					"raw": "http://localhost:8080/api/quests",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"quests"
+					]
+				}
+			}
+		},
+		{
+			"name": "Claim Quest",
+			"request": {
+				"method": "POST",
+				"url": {
+					"raw": "http://localhost:8080/api/quests/{quest_id}/claim",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"quests",
+						"{quest_id}",
+						"claim"
+					]
+				}
+			}
+		},
+		{
+			"name": "Submit Quest",
+			"request": {
+				"method": "POST",
+				"url": {
+					"raw": "http://localhost:8080/api/quests/{quest_id}/submit",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"quests",
+						"{quest_id}",
+						"submit"
+					]
+				}
+			}
+		},
+		{
+			"name": "Get Pending Submissions (Admin)",
+			"request": {
+				"method": "GET",
+				"url": {
+					"raw": "http://localhost:8080/api/quests/submissions/pending",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"quests",
+						"submissions",
+						"pending"
+					]
+				}
+			}
+		},
+		{
+			"name": "Approve Submission (Admin)",
+			"request": {
+				"method": "PUT",
+				"url": {
+					"raw": "http://localhost:8080/api/quests/submissions/{submission_id}/approve",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"quests",
+						"submissions",
+						"{submission_id}",
+						"approve"
+					]
+				}
+			}
+		},
+		{
+			"name": "My Progress",
+			"request": {
+				"method": "GET",
+				"url": {
+					"raw": "http://localhost:8080/api/quests/my-progress",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"quests",
+						"my-progress"
+					]
+				}
+			}
+		},
+		{
+			"name": "Leaderboard",
+			"request": {
+				"method": "GET",
+				"url": {
+					"raw": "http://localhost:8080/api/quests/leaderboard",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"quests",
+						"leaderboard"
+					]
+				}
+			}
+		}
+	]
+}

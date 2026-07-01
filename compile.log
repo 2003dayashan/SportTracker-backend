@@ -1,0 +1,642 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ---------------------< com.example:SportsTracker >----------------------
+[INFO] Building SportsTracker 0.0.1-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.4.1:clean (default-clean) @ SportsTracker ---
+[INFO] Deleting E:\Github Projects\SportTracker-backend\target
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ SportsTracker ---
+[INFO] Copying 1 resource from src\main\resources to target\classes
+[INFO] Copying 5 resources from src\main\resources to target\classes
+[INFO] 
+[INFO] --- compiler:3.14.1:compile (default-compile) @ SportsTracker ---
+[INFO] Recompiling the module because of changed source code.
+[INFO] Compiling 96 source files with javac [debug parameters release 21] to target\classes
+[INFO] /E:/Github Projects/SportTracker-backend/src/main/java/com/example/SportsTracker/football/service/FootballApiService.java: Some input files use unchecked or unsafe operations.
+[INFO] /E:/Github Projects/SportTracker-backend/src/main/java/com/example/SportsTracker/football/service/FootballApiService.java: Recompile with -Xlint:unchecked for details.
+[INFO] -------------------------------------------------------------
+[ERROR] COMPILATION ERROR : 
+[INFO] -------------------------------------------------------------
+[ERROR] /E:/Github Projects/SportTracker-backend/src/main/java/com/example/SportsTracker/core/controller/AuthController.java:[57,45] cannot find symbol
+  symbol:   method builder()
+  location: class com.example.SportsTracker.core.dto.AuthResponse
+[ERROR] /E:/Github Projects/SportTracker-backend/src/main/java/com/example/SportsTracker/core/controller/AuthController.java:[58,25] cannot find symbol
+  symbol:   method getId()
+  location: variable user of type com.example.SportsTracker.core.model.User
+[ERROR] /E:/Github Projects/SportTracker-backend/src/main/java/com/example/SportsTracker/core/controller/AuthController.java:[59,31] cannot find symbol
+  symbol:   method getUsername()
+  location: variable user of type com.example.SportsTracker.core.model.User
+[ERROR] /E:/Github Projects/SportTracker-backend/src/main/java/com/example/SportsTracker/core/controller/AuthController.java:[60,28] cannot find symbol
+  symbol:   method getEmail()
+  location: variable user of type com.example.SportsTracker.core.model.User
+[ERROR] /E:/Github Projects/SportTracker-backend/src/main/java/com/example/SportsTracker/core/controller/AuthController.java:[61,28] cannot find symbol
+  symbol:   method getRoles()
+  location: variable user of type com.example.SportsTracker.core.model.User
+[ERROR] /E:/Github Projects/SportTracker-backend/src/main/java/com/example/SportsTracker/core/controller/AuthController.java:[91,20] cannot find symbol
+  symbol:   method getUsername()
+  location: variable request of type com.example.SportsTracker.core.model.UpdateProfileRequest
+[ERROR] /E:/Github Projects/SportTracker-backend/src/main/java/com/example/SportsTracker/core/controller/AuthController.java:[91,68] cannot find symbol
+  symbol:   method getUsername()
+  location: variable request of type com.example.SportsTracker.core.model.UpdateProfileRequest
+[ERROR] /E:/Github Projects/SportTracker-backend/src/main/java/com/example/SportsTracker/core/controller/AuthController.java:[92,20] cannot find symbol
+  symbol:   method getEmail()
+  location: variable request of type com.example.SportsTracker.core.model.UpdateProfileRequest
+[ERROR] /E:/Github Projects/SportTracker-backend/src/main/java/com/example/SportsTracker/core/controller/AuthController.java:[92,62] cannot find symbol
+  symbol:   method getEmail()
+  location: variable request of type com.example.SportsTracker.core.model.UpdateProfileRequest
+[ERROR] /E:/Github Projects/SportTracker-backend/src/main/java/com/example/SportsTracker/core/controller/AuthController.java:[95,45] cannot find symbol
+  symbol:   method builder()
+  location: class com.example.SportsTracker.core.dto.AuthResponse
+[ERROR] /E:/Github Projects/SportTracker-backend/src/main/java/com/example/SportsTracker/core/controller/AuthController.java:[96,25] cannot find symbol
+  symbol:   method getId()
+  location: variable user of type com.example.SportsTracker.core.model.User
+[ERROR] /E:/Github Projects/SportTracker-backend/src/main/java/com/example/SportsTracker/core/controller/AuthController.java:[97,31] cannot find symbol
+  symbol:   method getUsername()
+  location: variable user of type com.example.SportsTracker.core.model.User
+[ERROR] /E:/Github Projects/SportTracker-backend/src/main/java/com/example/SportsTracker/core/controller/AuthController.java:[98,28] cannot find symbol
+  symbol:   method getEmail()
+  location: variable user of type com.example.SportsTracker.core.model.User
+[ERROR] /E:/Github Projects/SportTracker-backend/src/main/java/com/example/SportsTracker/core/controller/AuthController.java:[99,28] cannot find symbol
+  symbol:   method getRoles()
+  location: variable user of type com.example.SportsTracker.core.model.User
+[ERROR] /E:/Github Projects/SportTracker-backend/src/main/java/com/example/SportsTracker/core/service/AuthService.java:[30,49] cannot find symbol
+  symbol:   method getEmail()
+  location: variable request of type com.example.SportsTracker.core.dto.SignupRequest
+[ERROR] /E:/Github Projects/SportTracker-backend/src/main/java/com/example/SportsTracker/core/service/AuthService.java:[33,52] cannot find symbol
+  symbol:   method getUsername()
+  location: variable request of type com.example.SportsTracker.core.dto.SignupRequest
+[ERROR] /E:/Github Projects/SportTracker-backend/src/main/java/com/example/SportsTracker/core/service/AuthService.java:[37,25] cannot find symbol
+  symbol:   method builder()
+  location: class com.example.SportsTracker.core.model.User
+[ERROR] /E:/Github Projects/SportTracker-backend/src/main/java/com/example/SportsTracker/core/service/AuthService.java:[38,34] cannot find symbol
+  symbol:   method getUsername()
+  location: variable request of type com.example.SportsTracker.core.dto.SignupRequest
+[ERROR] /E:/Github Projects/SportTracker-backend/src/main/java/com/example/SportsTracker/core/service/AuthService.java:[39,31] cannot find symbol
+  symbol:   method getEmail()
+  location: variable request of type com.example.SportsTracker.core.dto.SignupRequest
+[ERROR] /E:/Github Projects/SportTracker-backend/src/main/java/com/example/SportsTracker/core/service/AuthService.java:[40,57] cannot find symbol
+  symbol:   method getPassword()
+  location: variable request of type com.example.SportsTracker.core.dto.SignupRequest
+[ERROR] /E:/Github Projects/SportTracker-backend/src/main/java/com/example/SportsTracker/core/service/AuthService.java:[51,55] cannot find symbol
+  symbol:   method getEmail()
+  location: variable request of type com.example.SportsTracker.core.dto.SigninRequest
+[ERROR] /E:/Github Projects/SportTracker-backend/src/main/java/com/example/SportsTracker/core/service/AuthService.java:[54,45] cannot find symbol
+  symbol:   method getPassword()
+  location: variable request of type com.example.SportsTracker.core.dto.SigninRequest
+[ERROR] /E:/Github Projects/SportTracker-backend/src/main/java/com/example/SportsTracker/core/service/AuthService.java:[54,65] cannot find symbol
+  symbol:   method getPassword()
+  location: variable user of type com.example.SportsTracker.core.model.User
+[ERROR] /E:/Github Projects/SportTracker-backend/src/main/java/com/example/SportsTracker/core/service/AuthService.java:[59,45] cannot find symbol
+  symbol:   method getId()
+  location: variable user of type com.example.SportsTracker.core.model.User
+[ERROR] /E:/Github Projects/SportTracker-backend/src/main/java/com/example/SportsTracker/core/service/AuthService.java:[60,48] cannot find symbol
+  symbol:   method getRoles()
+  location: variable user of type com.example.SportsTracker.core.model.User
+[ERROR] /E:/Github Projects/SportTracker-backend/src/main/java/com/example/SportsTracker/core/service/AuthService.java:[72,28] cannot find symbol
+  symbol:   method builder()
+  location: class com.example.SportsTracker.core.dto.AuthResponse
+[ERROR] /E:/Github Projects/SportTracker-backend/src/main/java/com/example/SportsTracker/core/service/AuthService.java:[73,25] cannot find symbol
+  symbol:   method getId()
+  location: variable user of type com.example.SportsTracker.core.model.User
+[ERROR] /E:/Github Projects/SportTracker-backend/src/main/java/com/example/SportsTracker/core/service/AuthService.java:[74,31] cannot find symbol
+  symbol:   method getUsername()
+  location: variable user of type com.example.SportsTracker.core.model.User
+[ERROR] /E:/Github Projects/SportTracker-backend/src/main/java/com/example/SportsTracker/core/service/AuthService.java:[75,28] cannot find symbol
+  symbol:   method getEmail()
+  location: variable user of type com.example.SportsTracker.core.model.User
+[ERROR] /E:/Github Projects/SportTracker-backend/src/main/java/com/example/SportsTracker/core/service/AuthService.java:[76,28] cannot find symbol
+  symbol:   method getRoles()
+  location: variable user of type com.example.SportsTracker.core.model.User
+[ERROR] /E:/Github Projects/SportTracker-backend/src/main/java/com/example/SportsTracker/core/service/AuthService.java:[95,23] cannot find symbol
+  symbol:   method setEmail(java.lang.String)
+  location: variable resetToken of type com.example.SportsTracker.core.model.PasswordResetToken
+[ERROR] /E:/Github Projects/SportTracker-backend/src/main/java/com/example/SportsTracker/core/service/AuthService.java:[96,23] cannot find symbol
+  symbol:   method setToken(java.lang.String)
+  location: variable resetToken of type com.example.SportsTracker.core.model.PasswordResetToken
+[ERROR] /E:/Github Projects/SportTracker-backend/src/main/java/com/example/SportsTracker/core/service/AuthService.java:[97,23] cannot find symbol
+  symbol:   method setExpiresAt(java.time.LocalDateTime)
+  location: variable resetToken of type com.example.SportsTracker.core.model.PasswordResetToken
+[ERROR] /E:/Github Projects/SportTracker-backend/src/main/java/com/example/SportsTracker/core/service/AuthService.java:[98,23] cannot find symbol
+  symbol:   method setUsed(boolean)
+  location: variable resetToken of type com.example.SportsTracker.core.model.PasswordResetToken
+[ERROR] /E:/Github Projects/SportTracker-backend/src/main/java/com/example/SportsTracker/core/service/AuthService.java:[111,23] cannot find symbol
+  symbol:   method getExpiresAt()
+  location: variable resetToken of type com.example.SportsTracker.core.model.PasswordResetToken
+[ERROR] /E:/Github Projects/SportTracker-backend/src/main/java/com/example/SportsTracker/core/service/AuthService.java:[115,58] cannot find symbol
+  symbol:   method getEmail()
+  location: variable resetToken of type com.example.SportsTracker.core.model.PasswordResetToken
+[ERROR] /E:/Github Projects/SportTracker-backend/src/main/java/com/example/SportsTracker/core/service/AuthService.java:[119,13] cannot find symbol
+  symbol:   method setPassword(java.lang.String)
+  location: variable user of type com.example.SportsTracker.core.model.User
+[ERROR] /E:/Github Projects/SportTracker-backend/src/main/java/com/example/SportsTracker/core/service/AuthService.java:[123,19] cannot find symbol
+  symbol:   method setUsed(boolean)
+  location: variable resetToken of type com.example.SportsTracker.core.model.PasswordResetToken
+[ERROR] /E:/Github Projects/SportTracker-backend/src/main/java/com/example/SportsTracker/core/service/UserDetailsServiceImpl.java:[26,21] cannot find symbol
+  symbol:   method getEmail()
+  location: variable user of type com.example.SportsTracker.core.model.User
+[ERROR] /E:/Github Projects/SportTracker-backend/src/main/java/com/example/SportsTracker/core/service/UserDetailsServiceImpl.java:[27,21] cannot find symbol
+  symbol:   method getPassword()
+  location: variable user of type com.example.SportsTracker.core.model.User
+[ERROR] /E:/Github Projects/SportTracker-backend/src/main/java/com/example/SportsTracker/core/service/UserDetailsServiceImpl.java:[28,21] cannot find symbol
+  symbol:   method isEnabled()
+  location: variable user of type com.example.SportsTracker.core.model.User
+[ERROR] /E:/Github Projects/SportTracker-backend/src/main/java/com/example/SportsTracker/core/service/UserDetailsServiceImpl.java:[32,21] cannot find symbol
+  symbol:   method getRoles()
+  location: variable user of type com.example.SportsTracker.core.model.User
+[ERROR] /E:/Github Projects/SportTracker-backend/src/main/java/com/example/SportsTracker/esport/controller/BracketController.java:[24,46] invalid method reference
+  cannot find symbol
+    symbol:   method getScheduledAt()
+    location: class com.example.SportsTracker.esport.model.Match
+[ERROR] /E:/Github Projects/SportTracker-backend/src/main/java/com/example/SportsTracker/esport/service/MatchService.java:[22,32] cannot find symbol
+  symbol:   method getScoreA()
+  location: variable request of type com.example.SportsTracker.esport.dto.MatchScoreUpdateRequest
+[ERROR] /E:/Github Projects/SportTracker-backend/src/main/java/com/example/SportsTracker/esport/service/MatchService.java:[23,32] cannot find symbol
+  symbol:   method getScoreB()
+  location: variable request of type com.example.SportsTracker.esport.dto.MatchScoreUpdateRequest
+[ERROR] /E:/Github Projects/SportTracker-backend/src/main/java/com/example/SportsTracker/esport/service/PlayerService.java:[28,31] cannot find symbol
+  symbol:   method builder()
+  location: class com.example.SportsTracker.esport.model.Player
+[ERROR] /E:/Github Projects/SportTracker-backend/src/main/java/com/example/SportsTracker/esport/service/PlayerService.java:[30,32] cannot find symbol
+  symbol:   method getTeamId()
+  location: variable request of type com.example.SportsTracker.esport.dto.PlayerRequest
+[ERROR] /E:/Github Projects/SportTracker-backend/src/main/java/com/example/SportsTracker/esport/service/PlayerService.java:[31,34] cannot find symbol
+  symbol:   method getUsername()
+  location: variable request of type com.example.SportsTracker.esport.dto.PlayerRequest
+[ERROR] /E:/Github Projects/SportTracker-backend/src/main/java/com/example/SportsTracker/esport/service/PlayerService.java:[32,30] cannot find symbol
+  symbol:   method getRole()
+  location: variable request of type com.example.SportsTracker.esport.dto.PlayerRequest
+[ERROR] /E:/Github Projects/SportTracker-backend/src/main/java/com/example/SportsTracker/esport/service/PlayerService.java:[39,35] cannot find symbol
+  symbol:   method getUsername()
+  location: variable request of type com.example.SportsTracker.esport.dto.PlayerRequest
+[ERROR] /E:/Github Projects/SportTracker-backend/src/main/java/com/example/SportsTracker/esport/service/PlayerService.java:[40,33] cannot find symbol
+  symbol:   method getTeamId()
+  location: variable request of type com.example.SportsTracker.esport.dto.PlayerRequest
+[ERROR] /E:/Github Projects/SportTracker-backend/src/main/java/com/example/SportsTracker/esport/service/PlayerService.java:[41,31] cannot find symbol
+  symbol:   method getRole()
+  location: variable request of type com.example.SportsTracker.esport.dto.PlayerRequest
+[ERROR] /E:/Github Projects/SportTracker-backend/src/main/java/com/example/SportsTracker/esport/controller/StandingsController.java:[31,24] cannot find symbol
+  symbol:   method getId()
+  location: variable t of type com.example.SportsTracker.esport.model.Team
+[ERROR] /E:/Github Projects/SportTracker-backend/src/main/java/com/example/SportsTracker/esport/controller/StandingsController.java:[31,62] cannot find symbol
+  symbol:   method getName()
+  location: variable t of type com.example.SportsTracker.esport.model.Team
+[ERROR] /E:/Github Projects/SportTracker-backend/src/main/java/com/example/SportsTracker/esport/controller/StandingsController.java:[31,51] cannot find symbol
+  symbol:   method getId()
+  location: variable t of type com.example.SportsTracker.esport.model.Team
+[ERROR] /E:/Github Projects/SportTracker-backend/src/main/java/com/example/SportsTracker/esport/controller/StandingsController.java:[35,40] cannot find symbol
+  symbol:   method getTeamAId()
+  location: variable m of type com.example.SportsTracker.esport.model.Match
+[ERROR] /E:/Github Projects/SportTracker-backend/src/main/java/com/example/SportsTracker/esport/controller/StandingsController.java:[36,40] cannot find symbol
+  symbol:   method getTeamBId()
+  location: variable m of type com.example.SportsTracker.esport.model.Match
+[ERROR] /E:/Github Projects/SportTracker-backend/src/main/java/com/example/SportsTracker/esport/controller/StandingsController.java:[39,26] cannot find symbol
+  symbol:   method getPlayed()
+  location: variable a of type com.example.SportsTracker.esport.dto.StandingDto
+[ERROR] /E:/Github Projects/SportTracker-backend/src/main/java/com/example/SportsTracker/esport/controller/StandingsController.java:[40,26] cannot find symbol
+  symbol:   method getPlayed()
+  location: variable b of type com.example.SportsTracker.esport.dto.StandingDto
+[ERROR] /E:/Github Projects/SportTracker-backend/src/main/java/com/example/SportsTracker/esport/controller/StandingsController.java:[42,18] cannot find symbol
+  symbol:   method getWinnerId()
+  location: variable m of type com.example.SportsTracker.esport.model.Match
+[ERROR] /E:/Github Projects/SportTracker-backend/src/main/java/com/example/SportsTracker/esport/controller/StandingsController.java:[42,45] cannot find symbol
+  symbol:   method getWinnerId()
+  location: variable m of type com.example.SportsTracker.esport.model.Match
+[ERROR] /E:/Github Projects/SportTracker-backend/src/main/java/com/example/SportsTracker/esport/controller/StandingsController.java:[42,68] cannot find symbol
+  symbol:   method getTeamAId()
+  location: variable m of type com.example.SportsTracker.esport.model.Match
+[ERROR] /E:/Github Projects/SportTracker-backend/src/main/java/com/example/SportsTracker/esport/controller/StandingsController.java:[43,28] cannot find symbol
+  symbol:   method getWins()
+  location: variable a of type com.example.SportsTracker.esport.dto.StandingDto
+[ERROR] /E:/Github Projects/SportTracker-backend/src/main/java/com/example/SportsTracker/esport/controller/StandingsController.java:[44,30] cannot find symbol
+  symbol:   method getPoints()
+  location: variable a of type com.example.SportsTracker.esport.dto.StandingDto
+[ERROR] /E:/Github Projects/SportTracker-backend/src/main/java/com/example/SportsTracker/esport/controller/StandingsController.java:[45,30] cannot find symbol
+  symbol:   method getLosses()
+  location: variable b of type com.example.SportsTracker.esport.dto.StandingDto
+[ERROR] /E:/Github Projects/SportTracker-backend/src/main/java/com/example/SportsTracker/esport/controller/StandingsController.java:[46,25] cannot find symbol
+  symbol:   method getWinnerId()
+  location: variable m of type com.example.SportsTracker.esport.model.Match
+[ERROR] /E:/Github Projects/SportTracker-backend/src/main/java/com/example/SportsTracker/esport/controller/StandingsController.java:[46,52] cannot find symbol
+  symbol:   method getWinnerId()
+  location: variable m of type com.example.SportsTracker.esport.model.Match
+[ERROR] /E:/Github Projects/SportTracker-backend/src/main/java/com/example/SportsTracker/esport/controller/StandingsController.java:[46,75] cannot find symbol
+  symbol:   method getTeamBId()
+  location: variable m of type com.example.SportsTracker.esport.model.Match
+[ERROR] /E:/Github Projects/SportTracker-backend/src/main/java/com/example/SportsTracker/esport/controller/StandingsController.java:[47,28] cannot find symbol
+  symbol:   method getWins()
+  location: variable b of type com.example.SportsTracker.esport.dto.StandingDto
+[ERROR] /E:/Github Projects/SportTracker-backend/src/main/java/com/example/SportsTracker/esport/controller/StandingsController.java:[48,30] cannot find symbol
+  symbol:   method getPoints()
+  location: variable b of type com.example.SportsTracker.esport.dto.StandingDto
+[ERROR] /E:/Github Projects/SportTracker-backend/src/main/java/com/example/SportsTracker/esport/controller/StandingsController.java:[49,30] cannot find symbol
+  symbol:   method getLosses()
+  location: variable a of type com.example.SportsTracker.esport.dto.StandingDto
+[ERROR] /E:/Github Projects/SportTracker-backend/src/main/java/com/example/SportsTracker/esport/controller/StandingsController.java:[54,49] invalid method reference
+  cannot find symbol
+    symbol:   method getPoints()
+    location: class com.example.SportsTracker.esport.dto.StandingDto
+[ERROR] /E:/Github Projects/SportTracker-backend/src/main/java/com/example/SportsTracker/esport/service/TeamService.java:[18,25] cannot find symbol
+  symbol:   method builder()
+  location: class com.example.SportsTracker.esport.model.Team
+[ERROR] /E:/Github Projects/SportTracker-backend/src/main/java/com/example/SportsTracker/esport/service/TeamService.java:[19,30] cannot find symbol
+  symbol:   method getName()
+  location: variable request of type com.example.SportsTracker.esport.dto.TeamRequest
+[ERROR] /E:/Github Projects/SportTracker-backend/src/main/java/com/example/SportsTracker/esport/service/TeamService.java:[20,38] cannot find symbol
+  symbol:   method getTournamentId()
+  location: variable request of type com.example.SportsTracker.esport.dto.TeamRequest
+[ERROR] /E:/Github Projects/SportTracker-backend/src/main/java/com/example/SportsTracker/esport/service/TeamService.java:[21,33] cannot find symbol
+  symbol:   method getLogoUrl()
+  location: variable request of type com.example.SportsTracker.esport.dto.TeamRequest
+[ERROR] /E:/Github Projects/SportTracker-backend/src/main/java/com/example/SportsTracker/esport/service/TeamService.java:[39,29] cannot find symbol
+  symbol:   method getName()
+  location: variable request of type com.example.SportsTracker.esport.dto.TeamRequest
+[ERROR] /E:/Github Projects/SportTracker-backend/src/main/java/com/example/SportsTracker/esport/service/TeamService.java:[40,37] cannot find symbol
+  symbol:   method getTournamentId()
+  location: variable request of type com.example.SportsTracker.esport.dto.TeamRequest
+[ERROR] /E:/Github Projects/SportTracker-backend/src/main/java/com/example/SportsTracker/esport/service/TeamService.java:[41,32] cannot find symbol
+  symbol:   method getLogoUrl()
+  location: variable request of type com.example.SportsTracker.esport.dto.TeamRequest
+[ERROR] /E:/Github Projects/SportTracker-backend/src/main/java/com/example/SportsTracker/esport/service/TournamentService.java:[25,43] cannot find symbol
+  symbol:   method builder()
+  location: class com.example.SportsTracker.esport.model.Tournament
+[ERROR] /E:/Github Projects/SportTracker-backend/src/main/java/com/example/SportsTracker/esport/service/TournamentService.java:[26,30] cannot find symbol
+  symbol:   method getName()
+  location: variable request of type com.example.SportsTracker.esport.dto.TournamentRequest
+[ERROR] /E:/Github Projects/SportTracker-backend/src/main/java/com/example/SportsTracker/esport/service/TournamentService.java:[27,30] cannot find symbol
+  symbol:   method getGame()
+  location: variable request of type com.example.SportsTracker.esport.dto.TournamentRequest
+[ERROR] /E:/Github Projects/SportTracker-backend/src/main/java/com/example/SportsTracker/esport/service/TournamentService.java:[28,32] cannot find symbol
+  symbol:   method getFormat()
+  location: variable request of type com.example.SportsTracker.esport.dto.TournamentRequest
+[ERROR] /E:/Github Projects/SportTracker-backend/src/main/java/com/example/SportsTracker/esport/service/TournamentService.java:[29,32] cannot find symbol
+  symbol:   method getStatus()
+  location: variable request of type com.example.SportsTracker.esport.dto.TournamentRequest
+[ERROR] /E:/Github Projects/SportTracker-backend/src/main/java/com/example/SportsTracker/esport/service/TournamentService.java:[30,35] cannot find symbol
+  symbol:   method getStartDate()
+  location: variable request of type com.example.SportsTracker.esport.dto.TournamentRequest
+[ERROR] /E:/Github Projects/SportTracker-backend/src/main/java/com/example/SportsTracker/esport/service/TournamentService.java:[31,33] cannot find symbol
+  symbol:   method getEndDate()
+  location: variable request of type com.example.SportsTracker.esport.dto.TournamentRequest
+[ERROR] /E:/Github Projects/SportTracker-backend/src/main/java/com/example/SportsTracker/esport/service/TournamentService.java:[32,34] cannot find symbol
+  symbol:   method getMaxTeams()
+  location: variable request of type com.example.SportsTracker.esport.dto.TournamentRequest
+[ERROR] /E:/Github Projects/SportTracker-backend/src/main/java/com/example/SportsTracker/esport/service/TournamentService.java:[50,26] cannot find symbol
+  symbol:   method getName()
+  location: variable request of type com.example.SportsTracker.esport.dto.TournamentRequest
+[ERROR] /E:/Github Projects/SportTracker-backend/src/main/java/com/example/SportsTracker/esport/service/TournamentService.java:[51,26] cannot find symbol
+  symbol:   method getGame()
+  location: variable request of type com.example.SportsTracker.esport.dto.TournamentRequest
+[ERROR] /E:/Github Projects/SportTracker-backend/src/main/java/com/example/SportsTracker/esport/service/TournamentService.java:[52,28] cannot find symbol
+  symbol:   method getFormat()
+  location: variable request of type com.example.SportsTracker.esport.dto.TournamentRequest
+[ERROR] /E:/Github Projects/SportTracker-backend/src/main/java/com/example/SportsTracker/esport/service/TournamentService.java:[53,28] cannot find symbol
+  symbol:   method getStatus()
+  location: variable request of type com.example.SportsTracker.esport.dto.TournamentRequest
+[ERROR] /E:/Github Projects/SportTracker-backend/src/main/java/com/example/SportsTracker/esport/service/TournamentService.java:[54,31] cannot find symbol
+  symbol:   method getStartDate()
+  location: variable request of type com.example.SportsTracker.esport.dto.TournamentRequest
+[ERROR] /E:/Github Projects/SportTracker-backend/src/main/java/com/example/SportsTracker/esport/service/TournamentService.java:[55,29] cannot find symbol
+  symbol:   method getEndDate()
+  location: variable request of type com.example.SportsTracker.esport.dto.TournamentRequest
+[ERROR] /E:/Github Projects/SportTracker-backend/src/main/java/com/example/SportsTracker/esport/service/TournamentService.java:[56,30] cannot find symbol
+  symbol:   method getMaxTeams()
+  location: variable request of type com.example.SportsTracker.esport.dto.TournamentRequest
+[ERROR] /E:/Github Projects/SportTracker-backend/src/main/java/com/example/SportsTracker/esport/service/TournamentService.java:[68,31] cannot find symbol
+  symbol:   method setStatus(com.example.SportsTracker.esport.model.TournamentStatus)
+  location: variable t of type com.example.SportsTracker.esport.model.Tournament
+[ERROR] /E:/Github Projects/SportTracker-backend/src/main/java/com/example/SportsTracker/football/service/FanProfileService.java:[21,16] cannot find symbol
+  symbol:   method setUserId(java.lang.String)
+  location: variable profile of type com.example.SportsTracker.football.model.FanProfile
+[ERROR] /E:/Github Projects/SportTracker-backend/src/main/java/com/example/SportsTracker/football/service/FanProfileService.java:[22,39] cannot find symbol
+  symbol:   method getDisplayName()
+  location: variable request of type com.example.SportsTracker.football.dto.FanProfileRequest
+[ERROR] /E:/Github Projects/SportTracker-backend/src/main/java/com/example/SportsTracker/football/service/FanProfileService.java:[23,39] cannot find symbol
+  symbol:   method getCountryCode()
+  location: variable request of type com.example.SportsTracker.football.dto.FanProfileRequest
+[ERROR] /E:/Github Projects/SportTracker-backend/src/main/java/com/example/SportsTracker/football/service/FootballClubService.java:[19,41] cannot find symbol
+  symbol:   method builder()
+  location: class com.example.SportsTracker.football.model.FootballClub
+[ERROR] /E:/Github Projects/SportTracker-backend/src/main/java/com/example/SportsTracker/football/service/FootballClubService.java:[20,26] cannot find symbol
+  symbol:   method getName()
+  location: variable req of type com.example.SportsTracker.football.dto.ClubRequest
+[INFO] 100 errors 
+[INFO] -------------------------------------------------------------
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  3.818 s
+[INFO] Finished at: 2026-07-01T21:34:00+05:30
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.14.1:compile (default-compile) on project SportsTracker: Compilation failure: Compilation failure: 
+[ERROR] /E:/Github Projects/SportTracker-backend/src/main/java/com/example/SportsTracker/core/controller/AuthController.java:[57,45] cannot find symbol
+[ERROR]   symbol:   method builder()
+[ERROR]   location: class com.example.SportsTracker.core.dto.AuthResponse
+[ERROR] /E:/Github Projects/SportTracker-backend/src/main/java/com/example/SportsTracker/core/controller/AuthController.java:[58,25] cannot find symbol
+[ERROR]   symbol:   method getId()
+[ERROR]   location: variable user of type com.example.SportsTracker.core.model.User
+[ERROR] /E:/Github Projects/SportTracker-backend/src/main/java/com/example/SportsTracker/core/controller/AuthController.java:[59,31] cannot find symbol
+[ERROR]   symbol:   method getUsername()
+[ERROR]   location: variable user of type com.example.SportsTracker.core.model.User
+[ERROR] /E:/Github Projects/SportTracker-backend/src/main/java/com/example/SportsTracker/core/controller/AuthController.java:[60,28] cannot find symbol
+[ERROR]   symbol:   method getEmail()
+[ERROR]   location: variable user of type com.example.SportsTracker.core.model.User
+[ERROR] /E:/Github Projects/SportTracker-backend/src/main/java/com/example/SportsTracker/core/controller/AuthController.java:[61,28] cannot find symbol
+[ERROR]   symbol:   method getRoles()
+[ERROR]   location: variable user of type com.example.SportsTracker.core.model.User
+[ERROR] /E:/Github Projects/SportTracker-backend/src/main/java/com/example/SportsTracker/core/controller/AuthController.java:[91,20] cannot find symbol
+[ERROR]   symbol:   method getUsername()
+[ERROR]   location: variable request of type com.example.SportsTracker.core.model.UpdateProfileRequest
+[ERROR] /E:/Github Projects/SportTracker-backend/src/main/java/com/example/SportsTracker/core/controller/AuthController.java:[91,68] cannot find symbol
+[ERROR]   symbol:   method getUsername()
+[ERROR]   location: variable request of type com.example.SportsTracker.core.model.UpdateProfileRequest
+[ERROR] /E:/Github Projects/SportTracker-backend/src/main/java/com/example/SportsTracker/core/controller/AuthController.java:[92,20] cannot find symbol
+[ERROR]   symbol:   method getEmail()
+[ERROR]   location: variable request of type com.example.SportsTracker.core.model.UpdateProfileRequest
+[ERROR] /E:/Github Projects/SportTracker-backend/src/main/java/com/example/SportsTracker/core/controller/AuthController.java:[92,62] cannot find symbol
+[ERROR]   symbol:   method getEmail()
+[ERROR]   location: variable request of type com.example.SportsTracker.core.model.UpdateProfileRequest
+[ERROR] /E:/Github Projects/SportTracker-backend/src/main/java/com/example/SportsTracker/core/controller/AuthController.java:[95,45] cannot find symbol
+[ERROR]   symbol:   method builder()
+[ERROR]   location: class com.example.SportsTracker.core.dto.AuthResponse
+[ERROR] /E:/Github Projects/SportTracker-backend/src/main/java/com/example/SportsTracker/core/controller/AuthController.java:[96,25] cannot find symbol
+[ERROR]   symbol:   method getId()
+[ERROR]   location: variable user of type com.example.SportsTracker.core.model.User
+[ERROR] /E:/Github Projects/SportTracker-backend/src/main/java/com/example/SportsTracker/core/controller/AuthController.java:[97,31] cannot find symbol
+[ERROR]   symbol:   method getUsername()
+[ERROR]   location: variable user of type com.example.SportsTracker.core.model.User
+[ERROR] /E:/Github Projects/SportTracker-backend/src/main/java/com/example/SportsTracker/core/controller/AuthController.java:[98,28] cannot find symbol
+[ERROR]   symbol:   method getEmail()
+[ERROR]   location: variable user of type com.example.SportsTracker.core.model.User
+[ERROR] /E:/Github Projects/SportTracker-backend/src/main/java/com/example/SportsTracker/core/controller/AuthController.java:[99,28] cannot find symbol
+[ERROR]   symbol:   method getRoles()
+[ERROR]   location: variable user of type com.example.SportsTracker.core.model.User
+[ERROR] /E:/Github Projects/SportTracker-backend/src/main/java/com/example/SportsTracker/core/service/AuthService.java:[30,49] cannot find symbol
+[ERROR]   symbol:   method getEmail()
+[ERROR]   location: variable request of type com.example.SportsTracker.core.dto.SignupRequest
+[ERROR] /E:/Github Projects/SportTracker-backend/src/main/java/com/example/SportsTracker/core/service/AuthService.java:[33,52] cannot find symbol
+[ERROR]   symbol:   method getUsername()
+[ERROR]   location: variable request of type com.example.SportsTracker.core.dto.SignupRequest
+[ERROR] /E:/Github Projects/SportTracker-backend/src/main/java/com/example/SportsTracker/core/service/AuthService.java:[37,25] cannot find symbol
+[ERROR]   symbol:   method builder()
+[ERROR]   location: class com.example.SportsTracker.core.model.User
+[ERROR] /E:/Github Projects/SportTracker-backend/src/main/java/com/example/SportsTracker/core/service/AuthService.java:[38,34] cannot find symbol
+[ERROR]   symbol:   method getUsername()
+[ERROR]   location: variable request of type com.example.SportsTracker.core.dto.SignupRequest
+[ERROR] /E:/Github Projects/SportTracker-backend/src/main/java/com/example/SportsTracker/core/service/AuthService.java:[39,31] cannot find symbol
+[ERROR]   symbol:   method getEmail()
+[ERROR]   location: variable request of type com.example.SportsTracker.core.dto.SignupRequest
+[ERROR] /E:/Github Projects/SportTracker-backend/src/main/java/com/example/SportsTracker/core/service/AuthService.java:[40,57] cannot find symbol
+[ERROR]   symbol:   method getPassword()
+[ERROR]   location: variable request of type com.example.SportsTracker.core.dto.SignupRequest
+[ERROR] /E:/Github Projects/SportTracker-backend/src/main/java/com/example/SportsTracker/core/service/AuthService.java:[51,55] cannot find symbol
+[ERROR]   symbol:   method getEmail()
+[ERROR]   location: variable request of type com.example.SportsTracker.core.dto.SigninRequest
+[ERROR] /E:/Github Projects/SportTracker-backend/src/main/java/com/example/SportsTracker/core/service/AuthService.java:[54,45] cannot find symbol
+[ERROR]   symbol:   method getPassword()
+[ERROR]   location: variable request of type com.example.SportsTracker.core.dto.SigninRequest
+[ERROR] /E:/Github Projects/SportTracker-backend/src/main/java/com/example/SportsTracker/core/service/AuthService.java:[54,65] cannot find symbol
+[ERROR]   symbol:   method getPassword()
+[ERROR]   location: variable user of type com.example.SportsTracker.core.model.User
+[ERROR] /E:/Github Projects/SportTracker-backend/src/main/java/com/example/SportsTracker/core/service/AuthService.java:[59,45] cannot find symbol
+[ERROR]   symbol:   method getId()
+[ERROR]   location: variable user of type com.example.SportsTracker.core.model.User
+[ERROR] /E:/Github Projects/SportTracker-backend/src/main/java/com/example/SportsTracker/core/service/AuthService.java:[60,48] cannot find symbol
+[ERROR]   symbol:   method getRoles()
+[ERROR]   location: variable user of type com.example.SportsTracker.core.model.User
+[ERROR] /E:/Github Projects/SportTracker-backend/src/main/java/com/example/SportsTracker/core/service/AuthService.java:[72,28] cannot find symbol
+[ERROR]   symbol:   method builder()
+[ERROR]   location: class com.example.SportsTracker.core.dto.AuthResponse
+[ERROR] /E:/Github Projects/SportTracker-backend/src/main/java/com/example/SportsTracker/core/service/AuthService.java:[73,25] cannot find symbol
+[ERROR]   symbol:   method getId()
+[ERROR]   location: variable user of type com.example.SportsTracker.core.model.User
+[ERROR] /E:/Github Projects/SportTracker-backend/src/main/java/com/example/SportsTracker/core/service/AuthService.java:[74,31] cannot find symbol
+[ERROR]   symbol:   method getUsername()
+[ERROR]   location: variable user of type com.example.SportsTracker.core.model.User
+[ERROR] /E:/Github Projects/SportTracker-backend/src/main/java/com/example/SportsTracker/core/service/AuthService.java:[75,28] cannot find symbol
+[ERROR]   symbol:   method getEmail()
+[ERROR]   location: variable user of type com.example.SportsTracker.core.model.User
+[ERROR] /E:/Github Projects/SportTracker-backend/src/main/java/com/example/SportsTracker/core/service/AuthService.java:[76,28] cannot find symbol
+[ERROR]   symbol:   method getRoles()
+[ERROR]   location: variable user of type com.example.SportsTracker.core.model.User
+[ERROR] /E:/Github Projects/SportTracker-backend/src/main/java/com/example/SportsTracker/core/service/AuthService.java:[95,23] cannot find symbol
+[ERROR]   symbol:   method setEmail(java.lang.String)
+[ERROR]   location: variable resetToken of type com.example.SportsTracker.core.model.PasswordResetToken
+[ERROR] /E:/Github Projects/SportTracker-backend/src/main/java/com/example/SportsTracker/core/service/AuthService.java:[96,23] cannot find symbol
+[ERROR]   symbol:   method setToken(java.lang.String)
+[ERROR]   location: variable resetToken of type com.example.SportsTracker.core.model.PasswordResetToken
+[ERROR] /E:/Github Projects/SportTracker-backend/src/main/java/com/example/SportsTracker/core/service/AuthService.java:[97,23] cannot find symbol
+[ERROR]   symbol:   method setExpiresAt(java.time.LocalDateTime)
+[ERROR]   location: variable resetToken of type com.example.SportsTracker.core.model.PasswordResetToken
+[ERROR] /E:/Github Projects/SportTracker-backend/src/main/java/com/example/SportsTracker/core/service/AuthService.java:[98,23] cannot find symbol
+[ERROR]   symbol:   method setUsed(boolean)
+[ERROR]   location: variable resetToken of type com.example.SportsTracker.core.model.PasswordResetToken
+[ERROR] /E:/Github Projects/SportTracker-backend/src/main/java/com/example/SportsTracker/core/service/AuthService.java:[111,23] cannot find symbol
+[ERROR]   symbol:   method getExpiresAt()
+[ERROR]   location: variable resetToken of type com.example.SportsTracker.core.model.PasswordResetToken
+[ERROR] /E:/Github Projects/SportTracker-backend/src/main/java/com/example/SportsTracker/core/service/AuthService.java:[115,58] cannot find symbol
+[ERROR]   symbol:   method getEmail()
+[ERROR]   location: variable resetToken of type com.example.SportsTracker.core.model.PasswordResetToken
+[ERROR] /E:/Github Projects/SportTracker-backend/src/main/java/com/example/SportsTracker/core/service/AuthService.java:[119,13] cannot find symbol
+[ERROR]   symbol:   method setPassword(java.lang.String)
+[ERROR]   location: variable user of type com.example.SportsTracker.core.model.User
+[ERROR] /E:/Github Projects/SportTracker-backend/src/main/java/com/example/SportsTracker/core/service/AuthService.java:[123,19] cannot find symbol
+[ERROR]   symbol:   method setUsed(boolean)
+[ERROR]   location: variable resetToken of type com.example.SportsTracker.core.model.PasswordResetToken
+[ERROR] /E:/Github Projects/SportTracker-backend/src/main/java/com/example/SportsTracker/core/service/UserDetailsServiceImpl.java:[26,21] cannot find symbol
+[ERROR]   symbol:   method getEmail()
+[ERROR]   location: variable user of type com.example.SportsTracker.core.model.User
+[ERROR] /E:/Github Projects/SportTracker-backend/src/main/java/com/example/SportsTracker/core/service/UserDetailsServiceImpl.java:[27,21] cannot find symbol
+[ERROR]   symbol:   method getPassword()
+[ERROR]   location: variable user of type com.example.SportsTracker.core.model.User
+[ERROR] /E:/Github Projects/SportTracker-backend/src/main/java/com/example/SportsTracker/core/service/UserDetailsServiceImpl.java:[28,21] cannot find symbol
+[ERROR]   symbol:   method isEnabled()
+[ERROR]   location: variable user of type com.example.SportsTracker.core.model.User
+[ERROR] /E:/Github Projects/SportTracker-backend/src/main/java/com/example/SportsTracker/core/service/UserDetailsServiceImpl.java:[32,21] cannot find symbol
+[ERROR]   symbol:   method getRoles()
+[ERROR]   location: variable user of type com.example.SportsTracker.core.model.User
+[ERROR] /E:/Github Projects/SportTracker-backend/src/main/java/com/example/SportsTracker/esport/controller/BracketController.java:[24,46] invalid method reference
+[ERROR]   cannot find symbol
+[ERROR]     symbol:   method getScheduledAt()
+[ERROR]     location: class com.example.SportsTracker.esport.model.Match
+[ERROR] /E:/Github Projects/SportTracker-backend/src/main/java/com/example/SportsTracker/esport/service/MatchService.java:[22,32] cannot find symbol
+[ERROR]   symbol:   method getScoreA()
+[ERROR]   location: variable request of type com.example.SportsTracker.esport.dto.MatchScoreUpdateRequest
+[ERROR] /E:/Github Projects/SportTracker-backend/src/main/java/com/example/SportsTracker/esport/service/MatchService.java:[23,32] cannot find symbol
+[ERROR]   symbol:   method getScoreB()
+[ERROR]   location: variable request of type com.example.SportsTracker.esport.dto.MatchScoreUpdateRequest
+[ERROR] /E:/Github Projects/SportTracker-backend/src/main/java/com/example/SportsTracker/esport/service/PlayerService.java:[28,31] cannot find symbol
+[ERROR]   symbol:   method builder()
+[ERROR]   location: class com.example.SportsTracker.esport.model.Player
+[ERROR] /E:/Github Projects/SportTracker-backend/src/main/java/com/example/SportsTracker/esport/service/PlayerService.java:[30,32] cannot find symbol
+[ERROR]   symbol:   method getTeamId()
+[ERROR]   location: variable request of type com.example.SportsTracker.esport.dto.PlayerRequest
+[ERROR] /E:/Github Projects/SportTracker-backend/src/main/java/com/example/SportsTracker/esport/service/PlayerService.java:[31,34] cannot find symbol
+[ERROR]   symbol:   method getUsername()
+[ERROR]   location: variable request of type com.example.SportsTracker.esport.dto.PlayerRequest
+[ERROR] /E:/Github Projects/SportTracker-backend/src/main/java/com/example/SportsTracker/esport/service/PlayerService.java:[32,30] cannot find symbol
+[ERROR]   symbol:   method getRole()
+[ERROR]   location: variable request of type com.example.SportsTracker.esport.dto.PlayerRequest
+[ERROR] /E:/Github Projects/SportTracker-backend/src/main/java/com/example/SportsTracker/esport/service/PlayerService.java:[39,35] cannot find symbol
+[ERROR]   symbol:   method getUsername()
+[ERROR]   location: variable request of type com.example.SportsTracker.esport.dto.PlayerRequest
+[ERROR] /E:/Github Projects/SportTracker-backend/src/main/java/com/example/SportsTracker/esport/service/PlayerService.java:[40,33] cannot find symbol
+[ERROR]   symbol:   method getTeamId()
+[ERROR]   location: variable request of type com.example.SportsTracker.esport.dto.PlayerRequest
+[ERROR] /E:/Github Projects/SportTracker-backend/src/main/java/com/example/SportsTracker/esport/service/PlayerService.java:[41,31] cannot find symbol
+[ERROR]   symbol:   method getRole()
+[ERROR]   location: variable request of type com.example.SportsTracker.esport.dto.PlayerRequest
+[ERROR] /E:/Github Projects/SportTracker-backend/src/main/java/com/example/SportsTracker/esport/controller/StandingsController.java:[31,24] cannot find symbol
+[ERROR]   symbol:   method getId()
+[ERROR]   location: variable t of type com.example.SportsTracker.esport.model.Team
+[ERROR] /E:/Github Projects/SportTracker-backend/src/main/java/com/example/SportsTracker/esport/controller/StandingsController.java:[31,62] cannot find symbol
+[ERROR]   symbol:   method getName()
+[ERROR]   location: variable t of type com.example.SportsTracker.esport.model.Team
+[ERROR] /E:/Github Projects/SportTracker-backend/src/main/java/com/example/SportsTracker/esport/controller/StandingsController.java:[31,51] cannot find symbol
+[ERROR]   symbol:   method getId()
+[ERROR]   location: variable t of type com.example.SportsTracker.esport.model.Team
+[ERROR] /E:/Github Projects/SportTracker-backend/src/main/java/com/example/SportsTracker/esport/controller/StandingsController.java:[35,40] cannot find symbol
+[ERROR]   symbol:   method getTeamAId()
+[ERROR]   location: variable m of type com.example.SportsTracker.esport.model.Match
+[ERROR] /E:/Github Projects/SportTracker-backend/src/main/java/com/example/SportsTracker/esport/controller/StandingsController.java:[36,40] cannot find symbol
+[ERROR]   symbol:   method getTeamBId()
+[ERROR]   location: variable m of type com.example.SportsTracker.esport.model.Match
+[ERROR] /E:/Github Projects/SportTracker-backend/src/main/java/com/example/SportsTracker/esport/controller/StandingsController.java:[39,26] cannot find symbol
+[ERROR]   symbol:   method getPlayed()
+[ERROR]   location: variable a of type com.example.SportsTracker.esport.dto.StandingDto
+[ERROR] /E:/Github Projects/SportTracker-backend/src/main/java/com/example/SportsTracker/esport/controller/StandingsController.java:[40,26] cannot find symbol
+[ERROR]   symbol:   method getPlayed()
+[ERROR]   location: variable b of type com.example.SportsTracker.esport.dto.StandingDto
+[ERROR] /E:/Github Projects/SportTracker-backend/src/main/java/com/example/SportsTracker/esport/controller/StandingsController.java:[42,18] cannot find symbol
+[ERROR]   symbol:   method getWinnerId()
+[ERROR]   location: variable m of type com.example.SportsTracker.esport.model.Match
+[ERROR] /E:/Github Projects/SportTracker-backend/src/main/java/com/example/SportsTracker/esport/controller/StandingsController.java:[42,45] cannot find symbol
+[ERROR]   symbol:   method getWinnerId()
+[ERROR]   location: variable m of type com.example.SportsTracker.esport.model.Match
+[ERROR] /E:/Github Projects/SportTracker-backend/src/main/java/com/example/SportsTracker/esport/controller/StandingsController.java:[42,68] cannot find symbol
+[ERROR]   symbol:   method getTeamAId()
+[ERROR]   location: variable m of type com.example.SportsTracker.esport.model.Match
+[ERROR] /E:/Github Projects/SportTracker-backend/src/main/java/com/example/SportsTracker/esport/controller/StandingsController.java:[43,28] cannot find symbol
+[ERROR]   symbol:   method getWins()
+[ERROR]   location: variable a of type com.example.SportsTracker.esport.dto.StandingDto
+[ERROR] /E:/Github Projects/SportTracker-backend/src/main/java/com/example/SportsTracker/esport/controller/StandingsController.java:[44,30] cannot find symbol
+[ERROR]   symbol:   method getPoints()
+[ERROR]   location: variable a of type com.example.SportsTracker.esport.dto.StandingDto
+[ERROR] /E:/Github Projects/SportTracker-backend/src/main/java/com/example/SportsTracker/esport/controller/StandingsController.java:[45,30] cannot find symbol
+[ERROR]   symbol:   method getLosses()
+[ERROR]   location: variable b of type com.example.SportsTracker.esport.dto.StandingDto
+[ERROR] /E:/Github Projects/SportTracker-backend/src/main/java/com/example/SportsTracker/esport/controller/StandingsController.java:[46,25] cannot find symbol
+[ERROR]   symbol:   method getWinnerId()
+[ERROR]   location: variable m of type com.example.SportsTracker.esport.model.Match
+[ERROR] /E:/Github Projects/SportTracker-backend/src/main/java/com/example/SportsTracker/esport/controller/StandingsController.java:[46,52] cannot find symbol
+[ERROR]   symbol:   method getWinnerId()
+[ERROR]   location: variable m of type com.example.SportsTracker.esport.model.Match
+[ERROR] /E:/Github Projects/SportTracker-backend/src/main/java/com/example/SportsTracker/esport/controller/StandingsController.java:[46,75] cannot find symbol
+[ERROR]   symbol:   method getTeamBId()
+[ERROR]   location: variable m of type com.example.SportsTracker.esport.model.Match
+[ERROR] /E:/Github Projects/SportTracker-backend/src/main/java/com/example/SportsTracker/esport/controller/StandingsController.java:[47,28] cannot find symbol
+[ERROR]   symbol:   method getWins()
+[ERROR]   location: variable b of type com.example.SportsTracker.esport.dto.StandingDto
+[ERROR] /E:/Github Projects/SportTracker-backend/src/main/java/com/example/SportsTracker/esport/controller/StandingsController.java:[48,30] cannot find symbol
+[ERROR]   symbol:   method getPoints()
+[ERROR]   location: variable b of type com.example.SportsTracker.esport.dto.StandingDto
+[ERROR] /E:/Github Projects/SportTracker-backend/src/main/java/com/example/SportsTracker/esport/controller/StandingsController.java:[49,30] cannot find symbol
+[ERROR]   symbol:   method getLosses()
+[ERROR]   location: variable a of type com.example.SportsTracker.esport.dto.StandingDto
+[ERROR] /E:/Github Projects/SportTracker-backend/src/main/java/com/example/SportsTracker/esport/controller/StandingsController.java:[54,49] invalid method reference
+[ERROR]   cannot find symbol
+[ERROR]     symbol:   method getPoints()
+[ERROR]     location: class com.example.SportsTracker.esport.dto.StandingDto
+[ERROR] /E:/Github Projects/SportTracker-backend/src/main/java/com/example/SportsTracker/esport/service/TeamService.java:[18,25] cannot find symbol
+[ERROR]   symbol:   method builder()
+[ERROR]   location: class com.example.SportsTracker.esport.model.Team
+[ERROR] /E:/Github Projects/SportTracker-backend/src/main/java/com/example/SportsTracker/esport/service/TeamService.java:[19,30] cannot find symbol
+[ERROR]   symbol:   method getName()
+[ERROR]   location: variable request of type com.example.SportsTracker.esport.dto.TeamRequest
+[ERROR] /E:/Github Projects/SportTracker-backend/src/main/java/com/example/SportsTracker/esport/service/TeamService.java:[20,38] cannot find symbol
+[ERROR]   symbol:   method getTournamentId()
+[ERROR]   location: variable request of type com.example.SportsTracker.esport.dto.TeamRequest
+[ERROR] /E:/Github Projects/SportTracker-backend/src/main/java/com/example/SportsTracker/esport/service/TeamService.java:[21,33] cannot find symbol
+[ERROR]   symbol:   method getLogoUrl()
+[ERROR]   location: variable request of type com.example.SportsTracker.esport.dto.TeamRequest
+[ERROR] /E:/Github Projects/SportTracker-backend/src/main/java/com/example/SportsTracker/esport/service/TeamService.java:[39,29] cannot find symbol
+[ERROR]   symbol:   method getName()
+[ERROR]   location: variable request of type com.example.SportsTracker.esport.dto.TeamRequest
+[ERROR] /E:/Github Projects/SportTracker-backend/src/main/java/com/example/SportsTracker/esport/service/TeamService.java:[40,37] cannot find symbol
+[ERROR]   symbol:   method getTournamentId()
+[ERROR]   location: variable request of type com.example.SportsTracker.esport.dto.TeamRequest
+[ERROR] /E:/Github Projects/SportTracker-backend/src/main/java/com/example/SportsTracker/esport/service/TeamService.java:[41,32] cannot find symbol
+[ERROR]   symbol:   method getLogoUrl()
+[ERROR]   location: variable request of type com.example.SportsTracker.esport.dto.TeamRequest
+[ERROR] /E:/Github Projects/SportTracker-backend/src/main/java/com/example/SportsTracker/esport/service/TournamentService.java:[25,43] cannot find symbol
+[ERROR]   symbol:   method builder()
+[ERROR]   location: class com.example.SportsTracker.esport.model.Tournament
+[ERROR] /E:/Github Projects/SportTracker-backend/src/main/java/com/example/SportsTracker/esport/service/TournamentService.java:[26,30] cannot find symbol
+[ERROR]   symbol:   method getName()
+[ERROR]   location: variable request of type com.example.SportsTracker.esport.dto.TournamentRequest
+[ERROR] /E:/Github Projects/SportTracker-backend/src/main/java/com/example/SportsTracker/esport/service/TournamentService.java:[27,30] cannot find symbol
+[ERROR]   symbol:   method getGame()
+[ERROR]   location: variable request of type com.example.SportsTracker.esport.dto.TournamentRequest
+[ERROR] /E:/Github Projects/SportTracker-backend/src/main/java/com/example/SportsTracker/esport/service/TournamentService.java:[28,32] cannot find symbol
+[ERROR]   symbol:   method getFormat()
+[ERROR]   location: variable request of type com.example.SportsTracker.esport.dto.TournamentRequest
+[ERROR] /E:/Github Projects/SportTracker-backend/src/main/java/com/example/SportsTracker/esport/service/TournamentService.java:[29,32] cannot find symbol
+[ERROR]   symbol:   method getStatus()
+[ERROR]   location: variable request of type com.example.SportsTracker.esport.dto.TournamentRequest
+[ERROR] /E:/Github Projects/SportTracker-backend/src/main/java/com/example/SportsTracker/esport/service/TournamentService.java:[30,35] cannot find symbol
+[ERROR]   symbol:   method getStartDate()
+[ERROR]   location: variable request of type com.example.SportsTracker.esport.dto.TournamentRequest
+[ERROR] /E:/Github Projects/SportTracker-backend/src/main/java/com/example/SportsTracker/esport/service/TournamentService.java:[31,33] cannot find symbol
+[ERROR]   symbol:   method getEndDate()
+[ERROR]   location: variable request of type com.example.SportsTracker.esport.dto.TournamentRequest
+[ERROR] /E:/Github Projects/SportTracker-backend/src/main/java/com/example/SportsTracker/esport/service/TournamentService.java:[32,34] cannot find symbol
+[ERROR]   symbol:   method getMaxTeams()
+[ERROR]   location: variable request of type com.example.SportsTracker.esport.dto.TournamentRequest
+[ERROR] /E:/Github Projects/SportTracker-backend/src/main/java/com/example/SportsTracker/esport/service/TournamentService.java:[50,26] cannot find symbol
+[ERROR]   symbol:   method getName()
+[ERROR]   location: variable request of type com.example.SportsTracker.esport.dto.TournamentRequest
+[ERROR] /E:/Github Projects/SportTracker-backend/src/main/java/com/example/SportsTracker/esport/service/TournamentService.java:[51,26] cannot find symbol
+[ERROR]   symbol:   method getGame()
+[ERROR]   location: variable request of type com.example.SportsTracker.esport.dto.TournamentRequest
+[ERROR] /E:/Github Projects/SportTracker-backend/src/main/java/com/example/SportsTracker/esport/service/TournamentService.java:[52,28] cannot find symbol
+[ERROR]   symbol:   method getFormat()
+[ERROR]   location: variable request of type com.example.SportsTracker.esport.dto.TournamentRequest
+[ERROR] /E:/Github Projects/SportTracker-backend/src/main/java/com/example/SportsTracker/esport/service/TournamentService.java:[53,28] cannot find symbol
+[ERROR]   symbol:   method getStatus()
+[ERROR]   location: variable request of type com.example.SportsTracker.esport.dto.TournamentRequest
+[ERROR] /E:/Github Projects/SportTracker-backend/src/main/java/com/example/SportsTracker/esport/service/TournamentService.java:[54,31] cannot find symbol
+[ERROR]   symbol:   method getStartDate()
+[ERROR]   location: variable request of type com.example.SportsTracker.esport.dto.TournamentRequest
+[ERROR] /E:/Github Projects/SportTracker-backend/src/main/java/com/example/SportsTracker/esport/service/TournamentService.java:[55,29] cannot find symbol
+[ERROR]   symbol:   method getEndDate()
+[ERROR]   location: variable request of type com.example.SportsTracker.esport.dto.TournamentRequest
+[ERROR] /E:/Github Projects/SportTracker-backend/src/main/java/com/example/SportsTracker/esport/service/TournamentService.java:[56,30] cannot find symbol
+[ERROR]   symbol:   method getMaxTeams()
+[ERROR]   location: variable request of type com.example.SportsTracker.esport.dto.TournamentRequest
+[ERROR] /E:/Github Projects/SportTracker-backend/src/main/java/com/example/SportsTracker/esport/service/TournamentService.java:[68,31] cannot find symbol
+[ERROR]   symbol:   method setStatus(com.example.SportsTracker.esport.model.TournamentStatus)
+[ERROR]   location: variable t of type com.example.SportsTracker.esport.model.Tournament
+[ERROR] /E:/Github Projects/SportTracker-backend/src/main/java/com/example/SportsTracker/football/service/FanProfileService.java:[21,16] cannot find symbol
+[ERROR]   symbol:   method setUserId(java.lang.String)
+[ERROR]   location: variable profile of type com.example.SportsTracker.football.model.FanProfile
+[ERROR] /E:/Github Projects/SportTracker-backend/src/main/java/com/example/SportsTracker/football/service/FanProfileService.java:[22,39] cannot find symbol
+[ERROR]   symbol:   method getDisplayName()
+[ERROR]   location: variable request of type com.example.SportsTracker.football.dto.FanProfileRequest
+[ERROR] /E:/Github Projects/SportTracker-backend/src/main/java/com/example/SportsTracker/football/service/FanProfileService.java:[23,39] cannot find symbol
+[ERROR]   symbol:   method getCountryCode()
+[ERROR]   location: variable request of type com.example.SportsTracker.football.dto.FanProfileRequest
+[ERROR] /E:/Github Projects/SportTracker-backend/src/main/java/com/example/SportsTracker/football/service/FootballClubService.java:[19,41] cannot find symbol
+[ERROR]   symbol:   method builder()
+[ERROR]   location: class com.example.SportsTracker.football.model.FootballClub
+[ERROR] /E:/Github Projects/SportTracker-backend/src/main/java/com/example/SportsTracker/football/service/FootballClubService.java:[20,26] cannot find symbol
+[ERROR]   symbol:   method getName()
+[ERROR]   location: variable req of type com.example.SportsTracker.football.dto.ClubRequest
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException

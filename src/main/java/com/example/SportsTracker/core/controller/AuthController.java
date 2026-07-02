@@ -14,6 +14,7 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
+import org.springframework.security.crypto.password.PasswordEncoder;
 
 import java.util.Map;
 
@@ -24,6 +25,7 @@ public class AuthController {
 
     private final AuthService authService;
     private final UserRepository userRepository;
+    private final PasswordEncoder passwordEncoder;
 
     @PostMapping("/signup")
     public ResponseEntity<AuthResponse> signup(@Valid @RequestBody SignupRequest request) {
@@ -88,8 +90,16 @@ public class AuthController {
         User user = userRepository.findById(userId)
                 .orElseThrow(() -> new UnauthorizedException("User not found"));
 
-        if (request.getUsername() != null) user.setUsername(request.getUsername());
-        if (request.getEmail() != null) user.setEmail(request.getEmail());
+        if (request.getUsername() != null && !request.getUsername().trim().isEmpty()) {
+            user.setUsername(request.getUsername());
+        }
+        if (request.getEmail() != null && !request.getEmail().trim().isEmpty()) {
+            user.setEmail(request.getEmail());
+        }
+        if (request.getPassword() != null && !request.getPassword().trim().isEmpty()) {
+            user.setPassword(passwordEncoder.encode(request.getPassword()));
+        }
+        
         userRepository.save(user);
 
         AuthResponse response = AuthResponse.builder()

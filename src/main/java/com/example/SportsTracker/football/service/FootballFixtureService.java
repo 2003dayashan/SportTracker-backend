@@ -18,6 +18,10 @@ public class FootballFixtureService {
 
     public List<FootballFixture> getAll() { return repository.findAll(); }
 
+    public boolean hasLiveMatches() {
+        return repository.existsByStatus(FixtureStatus.LIVE);
+    }
+
     public FootballFixture create(FixtureRequest req) {
         FootballFixture fixture = FootballFixture.builder()
                 .leagueId(req.getLeagueId()).homeClubId(req.getHomeClubId())

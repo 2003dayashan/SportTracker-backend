@@ -22,7 +22,7 @@ public class FootballApiService {
     private final RestTemplate restTemplate;
     private final FootballLeagueRepository leagueRepository;
 
-    @Value("${football.api.key:YOUR_API_KEY_HERE}")
+    @Value("${football.api.token:YOUR_API_KEY_HERE}")
     private String apiKey;
 
     private final String BASE_URL = "https://api.football-data.org/v4/competitions/";

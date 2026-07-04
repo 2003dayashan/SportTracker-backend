@@ -9,4 +9,5 @@ import java.util.List;
 public interface FootballFixtureRepository extends MongoRepository<FootballFixture, String> {
     List<FootballFixture> findByLeagueId(String leagueId);
     List<FootballFixture> findByLeagueIdAndStatus(String leagueId, com.example.SportsTracker.football.model.FixtureStatus status);
+    boolean existsByStatus(com.example.SportsTracker.football.model.FixtureStatus status);
 }

@@ -9,6 +9,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.security.core.Authentication;
 import org.springframework.web.bind.annotation.*;
 
+import org.springframework.data.domain.Page;
 import java.util.List;
 import java.util.Map;
 
@@ -20,18 +21,30 @@ public class QuestController {
     private QuestService questService;
 
     @GetMapping
-    public List<Quest> getAllQuests() {
-        return questService.getAllQuests();
+    public Page<Quest> getAllQuests(@RequestParam(defaultValue = "0") int page, @RequestParam(defaultValue = "10") int size) {
+        return questService.getAllQuests(page, size);
     }
 
     @GetMapping("/service/{serviceType}")
-    public List<Quest> getQuestsByService(@PathVariable ServiceType serviceType) {
-        return questService.getQuestsByService(serviceType);
+    public Page<Quest> getQuestsByService(@PathVariable ServiceType serviceType, @RequestParam(defaultValue = "0") int page, @RequestParam(defaultValue = "10") int size) {
+        return questService.getQuestsByService(serviceType, page, size);
+    }
+
+    @GetMapping("/{id}")
+    public ResponseEntity<Quest> getQuestById(@PathVariable String id) {
+        Quest quest = questService.getQuestById(id);
+        return quest != null ? ResponseEntity.ok(quest) : ResponseEntity.notFound().build();
     }
 
     @PostMapping
     public Quest createQuest(@RequestBody Quest quest) {
         return questService.createQuest(quest);
+    }
+
+    @PutMapping("/{id}")
+    public ResponseEntity<Quest> updateQuest(@PathVariable String id, @RequestBody Quest quest) {
+        Quest updated = questService.updateQuest(id, quest);
+        return updated != null ? ResponseEntity.ok(updated) : ResponseEntity.notFound().build();
     }
 
     @DeleteMapping("/{id}")
@@ -57,8 +70,8 @@ public class QuestController {
     }
 
     @GetMapping("/submissions/pending")
-    public List<QuestSubmission> getPendingSubmissions() {
-        return questService.getPendingSubmissions();
+    public Page<QuestSubmission> getPendingSubmissions(@RequestParam(defaultValue = "0") int page, @RequestParam(defaultValue = "10") int size) {
+        return questService.getPendingSubmissions(page, size);
     }
 
     @PutMapping("/submissions/{submissionId}/approve")

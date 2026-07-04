@@ -15,4 +15,8 @@ public class Quest {
     private ServiceType serviceType;
     private int points;
     private boolean isCompleted;
+    
+    private int difficulty; // 1-5 rating
+    private boolean isLiveEventRelated;
+    private String relatedMatchId;
 }

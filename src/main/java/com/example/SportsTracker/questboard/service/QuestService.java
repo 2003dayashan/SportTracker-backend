@@ -8,8 +8,13 @@ import com.example.SportsTracker.questboard.model.ServiceType;
 import com.example.SportsTracker.questboard.model.SubmissionStatus;
 import com.example.SportsTracker.questboard.repository.QuestRepository;
 import com.example.SportsTracker.questboard.repository.QuestSubmissionRepository;
+import com.example.SportsTracker.football.service.FootballFixtureService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
 
 import java.time.LocalDateTime;
 import java.util.*;
@@ -25,18 +30,40 @@ public class QuestService {
     
     @Autowired
     private UserRepository userRepository;
+    
+    @Autowired
+    private FootballFixtureService footballFixtureService;
 
-    public List<Quest> getAllQuests() {
-        return questRepository.findAll();
+    public Page<Quest> getAllQuests(int page, int size) {
+        Pageable pageable = PageRequest.of(page, size);
+        return questRepository.findAll(pageable);
     }
 
-    public List<Quest> getQuestsByService(ServiceType serviceType) {
-        return questRepository.findByServiceType(serviceType);
+    public Page<Quest> getQuestsByService(ServiceType serviceType, int page, int size) {
+        Pageable pageable = PageRequest.of(page, size);
+        return questRepository.findByServiceType(serviceType, pageable);
+    }
+
+    public Quest getQuestById(String id) {
+        return questRepository.findById(id).orElse(null);
     }
 
     public Quest createQuest(Quest quest) {
         quest.setCompleted(false);
         return questRepository.save(quest);
+    }
+
+    public Quest updateQuest(String id, Quest updatedQuest) {
+        return questRepository.findById(id).map(existingQuest -> {
+            existingQuest.setTitle(updatedQuest.getTitle());
+            existingQuest.setDescription(updatedQuest.getDescription());
+            existingQuest.setPoints(updatedQuest.getPoints());
+            existingQuest.setServiceType(updatedQuest.getServiceType());
+            existingQuest.setDifficulty(updatedQuest.getDifficulty());
+            existingQuest.setLiveEventRelated(updatedQuest.isLiveEventRelated());
+            existingQuest.setRelatedMatchId(updatedQuest.getRelatedMatchId());
+            return questRepository.save(existingQuest);
+        }).orElse(null);
     }
 
     public void deleteQuest(String id) {
@@ -64,7 +91,13 @@ public class QuestService {
         sub.setUsername(u.getUsername());
         sub.setQuestId(questId);
         sub.setQuestTitle(q.getTitle());
-        sub.setPoints(q.getPoints());
+        
+        int awardedPoints = q.getPoints();
+        if (q.isLiveEventRelated() && footballFixtureService.hasLiveMatches()) {
+            awardedPoints = (int) (awardedPoints * 1.5);
+        }
+        sub.setPoints(awardedPoints);
+        
         sub.setStatus(SubmissionStatus.CLAIMED);
         sub.setTimestamp(LocalDateTime.now());
         
@@ -96,8 +129,9 @@ public class QuestService {
         return null;
     }
     
-    public List<QuestSubmission> getPendingSubmissions() {
-        return submissionRepository.findByStatus(SubmissionStatus.SUBMITTED);
+    public Page<QuestSubmission> getPendingSubmissions(int page, int size) {
+        Pageable pageable = PageRequest.of(page, size);
+        return submissionRepository.findByStatus(SubmissionStatus.SUBMITTED, pageable);
     }
     
     // --- Leaderboard & Progress ---

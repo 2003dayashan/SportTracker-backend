@@ -15,6 +15,7 @@ import java.util.List;
 public class FootballFixtureService {
     private final FootballFixtureRepository repository;
     private final FootballStandingsService standingsService;
+    private final FootballFixtureRepository fixtureRepository;
 
     public List<FootballFixture> getAll() { return repository.findAll(); }
 
@@ -50,5 +51,16 @@ public class FootballFixtureService {
         standingsService.recalculateStandings(saved.getLeagueId());
 
         return saved;
+    }
+
+    // GET by ID
+    public FootballFixture getById(String id) {
+        return fixtureRepository.findById(id)
+                .orElseThrow(() -> new RuntimeException("Fixture not found: " + id));
+    }
+
+    // DELETE
+    public void delete(String id) {
+        fixtureRepository.deleteById(id);
     }
 }

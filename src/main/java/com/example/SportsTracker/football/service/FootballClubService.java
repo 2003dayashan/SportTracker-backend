@@ -12,6 +12,7 @@ import java.util.List;
 @RequiredArgsConstructor
 public class FootballClubService {
     private final FootballClubRepository repository;
+    private final FootballClubRepository clubRepository;
 
     public List<FootballClub> getAll() { return repository.findAll(); }
 
@@ -29,5 +30,10 @@ public class FootballClubService {
         club.setCountry(req.getCountry()); club.setStadiumName(req.getStadiumName());
         club.setBadgeUrl(req.getBadgeUrl()); club.setFoundedYear(req.getFoundedYear());
         return repository.save(club);
+    }
+
+    // DELETE
+    public void delete(String id) {
+        clubRepository.deleteById(id);
     }
 }

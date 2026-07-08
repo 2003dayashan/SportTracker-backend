@@ -123,4 +123,19 @@ public class FootballStandingsService {
             }
         }
     }
+
+    // SAVE (create or update)
+    public FootballStandings save(FootballStandings standing) {
+        return standingsRepository.save(standing);
+    }
+
+    // DELETE by ID
+    public void delete(String id) {
+        standingsRepository.deleteById(id);
+    }
+
+    // DELETE all standings for a league
+    public void deleteByLeague(String leagueId) {
+        standingsRepository.deleteByLeagueId(leagueId);
+    }
 }
